@@ -1,20 +1,15 @@
 {
   "name": "kekua-travel-site",
   "version": "1.0.0",
-  "description": "Site institucional e blog para a Kêkua Travel.",
+  "description": "Site institucional para a Kêkua Travel.",
   "main": ".eleventy.js",
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy"
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
   },
-  "keywords": [
-    "eleventy",
-    "static-site-generator",
-    "blog"
-  ],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "@11ty/eleventy": "^2.0.1"
   }
 }
