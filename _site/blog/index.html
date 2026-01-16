@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Kêkua Travel</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Descubra histórias, dicas e guias sobre São Tomé e Príncipe no nosso blog.">
+    <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Libraries -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Kêkua Travel</div>
+            <ul class="nav-links">
+                <li><a href="/#home" class="active">Início</a></li>
+                <li><a href="/#destino">O Destino</a></li>
+                <li><a href="/#sobre">Sobre</a></li>
+                <li><a href="/#pilares">Pilares</a></li>
+                <li><a href="/#galeria">Galeria</a></li>
+                <li><a href="/#contactos">Contactos</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="blog-container">
+    <h1 class="blog-title">Blog Kêkua Travel</h1>
+    <p class="blog-subtitle">Histórias, dicas e guias sobre São Tomé e Príncipe</p>
+<p><div class="post-list"></p>
+<p><a href="/blog/primeiro-post/" class="post-card">
+<div class="post-card-content">
+<h2 class="post-card-title">A Descoberta das Roças de Cacau em São Tomé</h2>
+<p class="post-card-excerpt">Uma viagem sensorial pelas antigas plantações que contam a história da &quot;Ilha Chocolate&quot;.</p>
+<span class="post-card-date">21 de maio, 2024</span>
+</div>
+</a></p>
+<p></div></p>
+</div>
+<style>
+.blog-container {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 5%;
+}
+.blog-title {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+.blog-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 4rem;
+}
+.post-list {
+    display: grid;
+    gap: 2rem;
+}
+.post-card {
+    display: block;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.post-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+.post-card-content {
+    padding: 2rem;
+}
+.post-card-title {
+    margin-bottom: 1rem;
+}
+.post-card-excerpt {
+    margin-bottom: 1.5rem;
+}
+.post-card-date {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+</style>
+
+    </main>
+
+    <footer>
+        <p>© 2024 Kêkua Travel – Projeto Académico (PAP)</p>
+    </footer>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>

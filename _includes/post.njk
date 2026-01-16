@@ -1,0 +1,46 @@
+---
+layout: layout.njk
+---
+
+<div class="post-container">
+    <article class="post">
+        <h1 class="post-title">{{ title }}</h1>
+        <p class="post-meta">Publicado em {{ page.date | postDate }}</p>
+        
+        <div class="post-content">
+            {{ content | safe }}
+        </div>
+    </article>
+</div>
+
+<style>
+.post-container {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 5%;
+}
+.post-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.post-meta {
+    color: #666;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+.post-content {
+    line-height: 1.8;
+}
+.post-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.post-content p, .post-content ul, .post-content ol {
+    margin-bottom: 1.5rem;
+}
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+</style>
