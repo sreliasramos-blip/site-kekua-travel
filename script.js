@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Swiper Hero Slider
+    // --- Swiper Hero Slider ---
     const swiper = new Swiper('.hero-slider', {
         loop: true,
         effect: 'fade',
@@ -21,86 +21,68 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-    // Responsive Navigation
+    // --- Language Selector --- 
+    const languageSelector = document.querySelector('.language-selector');
+    const languageDropdown = document.querySelector('.language-dropdown');
+    const chevronDown = document.querySelector('.current-language .fa-chevron-down');
+
+    if (languageSelector) {
+        languageSelector.addEventListener('click', (e) => {
+            e.stopPropagation(); // Evita que o evento de clique no documento feche o menu imediatamente
+            languageDropdown.classList.toggle('show');
+            chevronDown.style.transform = languageDropdown.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0deg)';
+        });
+    }
+
+    // Clicar fora do menu fecha-o
+    document.addEventListener('click', (e) => {
+        if (languageDropdown && languageDropdown.classList.contains('show')) {
+            languageDropdown.classList.remove('show');
+            chevronDown.style.transform = 'rotate(0deg)';
+        }
+    });
+
+    // --- Responsive Navigation (Burger Menu) ---
     const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links li');
+    const navLinks = document.querySelector('.nav-links');
 
-    burger.addEventListener('click', () => {
-        // Toggle Nav
-        nav.classList.toggle('nav-active');
-
-        // Animate Links
-        navLinks.forEach((link, index) => {
-            if (link.style.animation) {
-                link.style.animation = '';
+    if (burger) {
+        burger.addEventListener('click', () => {
+            // Adiciona a lógica para mostrar/esconder o menu de navegação em mobile
+            // (Esta parte pode ser mais elaborada com animações)
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
             } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.alignItems = 'center';
+                navLinks.style.padding = '2rem 0';
             }
+            burger.classList.toggle('toggle'); // Para animar o ícone do burger
         });
+    }
 
-        // Burger Animation
-        burger.classList.toggle('toggle');
-    });
-
-    // Fade-in sections on scroll
-    const fadeInSections = document.querySelectorAll('.fade-in');
-    const sectionObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { rootMargin: '0px 0px -100px 0px' });
-
-    fadeInSections.forEach(section => {
-        sectionObserver.observe(section);
-    });
-
-    // Active link highlighting
-    const sections = document.querySelectorAll('main section');
-    const navA = document.querySelectorAll('nav a');
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (pageYOffset >= sectionTop - 75) { // 75 is header height
-                current = section.getAttribute('id');
-            }
-        });
-
-        navA.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').substring(1) === current) {
-                link.classList.add('active');
-            }
-        });
-    });
-    
-    // App download button alert
+    // --- App download button alert ---
     const downloadBtn = document.getElementById('download-btn');
-    if(downloadBtn) {
+    if (downloadBtn) {
         downloadBtn.addEventListener('click', () => {
             alert('A aplicação Kêkua Travel está em desenvolvimento e estará disponível em breve!');
         });
     }
+
 });
 
-// Keyframes for nav links are not needed here, they should be in the CSS.
-// But if we were to add them with JS (not recommended):
+// Keyframes para a animação do burger (adicionado aqui para garantir que o CSS está completo)
 const styleSheet = document.createElement("style");
 styleSheet.type = "text/css";
 styleSheet.innerText = `
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.burger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.burger.toggle .line2 {
+    opacity: 0;
+}
+.burger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
 }`;
-document.head.appendChild(styleSheet);
+document.head.appendChild(styleSheet); 
