@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://your-domain.com/</loc>
+    <loc>https://kekuatravel.netlify.app/</loc>
     <lastmod>2024-05-21</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/#destino</loc>
+    <loc>https://kekuatravel.netlify.app/#destino</loc>
     <lastmod>2024-05-21</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/#sobre</loc>
+    <loc>https://kekuatravel.netlify.app/#sobre</loc>
     <lastmod>2024-05-21</lastmod>
     <priority>0.80</priority>
   </url>
    <url>
-    <loc>https://your-domain.com/#pilares</loc>
+    <loc>https://kekuatravel.netlify.app/#pilares</loc>
     <lastmod>2024-05-21</lastmod>
     <priority>0.80</priority>
   </url>
    <url>
-    <loc>https://your-domain.com/#galeria</loc>
+    <loc>https://kekuatravel.netlify.app/#galeria</loc>
     <lastmod>2024-05-21</lastmod>
     <priority>0.80</priority>
   </url>
    <url>
-    <loc>https://your-domain.com/#contactos</loc>
+    <loc>https://kekuatravel.netlify.app/#contactos</loc>
     <lastmod>2024-05-21</lastmod>
     <priority>0.80</priority>
   </url>
-  <!-- Add blog post URLs here when they are created -->
 </urlset>
