@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão Viajante - Kêkua Travel</title>
+
+    <!-- SEO, Favicon, Fonts, Libraries -->
+    <meta name="description" content="Adira ao Cartão de Viajante Kêkua e tenha acesso a benefícios exclusivos.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Estilos específicos para esta página */
+        .card-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/natureza.jpg') no-repeat center center/cover;
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 6rem 5%;
+        }
+        .card-hero h1 {
+            font-family: var(--font-logo);
+            font-size: 3.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        .benefits-section .benefit {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        .benefits-section .benefit:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .benefit-icon {
+            font-size: 4rem;
+            color: var(--accent-color);
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Cabeçalho consistente com as outras páginas -->
+        <nav>
+            <div class="logo">Kêkua Travel</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#destino">O Destino</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="#">Cartão Viajante</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div class="nav-extras">...</div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card-hero">
+            <h1>Cartão Viajante Kêkua</h1>
+            <p>A sua fidelidade merece ser recompensada. Entre num mundo de benefícios exclusivos.</p>
+        </section>
+
+        <section class="benefits-section fade-in">
+            <h2>Vantagens Exclusivas</h2>
+            <div class="benefit">
+                <i class="fas fa-star benefit-icon"></i>
+                <div class="benefit-text">
+                    <h3>Acumule Pontos Kêkua</h3>
+                    <p>Cada euro gasto nas suas viagens connosco converte-se em Pontos Kêkua. Troque os seus pontos por descontos em futuras viagens, experiências locais ou upgrades de alojamento.</p>
+                </div>
+            </div>
+            <div class="benefit">
+                <i class="fas fa-percent benefit-icon"></i>
+                <div class="benefit-text">
+                    <h3>Descontos em Parceiros</h3>
+                    <p>Apresente o seu cartão digital e beneficie de descontos imediatos em restaurantes, lojas de artesanato e atividades nos nossos parceiros selecionados em São Tomé e Príncipe.</p>
+                </div>
+            </div>
+            <div class="benefit">
+                <i class="fas fa-door-open benefit-icon"></i>
+                <div class="benefit-text">
+                    <h3>Acesso Antecipado</h3>
+                    <p>Seja o primeiro a saber sobre as nossas novas rotas e pacotes de viagem. Os membros do Cartão Viajante têm acesso prioritário a reservas e campanhas exclusivas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="text-align: center; background-color: var(--bg-color);">
+            <h2>Pronto para Começar a Viajar com Vantagens?</h2>
+            <p>A adesão é simples, digital e gratuita. Crie já o seu cartão.</p>
+            <a href="adesao-cartao.html" class="cta-button">Aderir ao Cartão</a>
+        </section>
+
+    </main>
+
+    <!-- Rodapé consistente com as outras páginas -->
+    <footer>
+         <!-- Conteúdo do footer... -->
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

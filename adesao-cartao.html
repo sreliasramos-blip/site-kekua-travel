@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adesão ao Cartão - Kêkua Travel</title>
+
+    <!-- SEO, Favicon, Fonts, Libraries -->
+    <meta name="description" content="Adira ao Cartão de Viajante Kêkua e tenha acesso a benefícios exclusivos.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Estilos específicos para a página de adesão */
+        .form-section {
+            max-width: 700px;
+            margin: 4rem auto;
+            padding: 3rem;
+            background-color: var(--bg-color);
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: var(--font-body);
+        }
+        .submit-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .submit-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Cabeçalho consistente com as outras páginas -->
+        <nav>
+            <div class="logo">Kêkua Travel</div>
+            <ul class="nav-links">
+                 <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#destino">O Destino</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="cartao-viajante.html">Cartão Viajante</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div class="nav-extras">...</div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section fade-in">
+            <h2>Adira ao Cartão de Viajante</h2>
+            <p>Preencha os seus dados para receber o seu cartão digital e começar a acumular benefícios.</p>
+            <br>
+            <form id="adesao-form">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="nascimento">Data de Nascimento</label>
+                    <input type="date" id="nascimento" name="nascimento" required>
+                </div>
+                <button type="submit" class="submit-button">Criar Cartão Digital</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé consistente com as outras páginas -->
+    <footer>
+         <!-- Conteúdo do footer... -->
+    </footer>
+    
+    <script>
+        // Lógica simples para o formulário (não envia dados reais)
+        document.getElementById('adesao-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Impede o envio real do formulário
+            const nome = document.getElementById('nome').value;
+            alert(`Obrigado, ${nome}!\nO seu cartão de viajante digital foi criado com sucesso e será enviado para o seu email.\n(Esta é uma simulação para um projeto académico.)`);
+            this.reset(); // Limpa o formulário
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
