@@ -4,43 +4,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const swiper = new Swiper('.hero-slider', {
         loop: true,
         effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+        fadeEffect: { crossFade: true },
+        autoplay: { delay: 5000, disableOnInteraction: false },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
     });
 
     // --- Language Selector --- 
-    const languageSelector = document.querySelector('.language-selector');
-    const languageDropdown = document.querySelector('.language-dropdown');
-    const chevronDown = document.querySelector('.current-language .fa-chevron-down');
+    const langSelector = document.querySelector('.language-selector');
+    const langDropdown = document.querySelector('.language-dropdown');
 
-    if (languageSelector) {
-        languageSelector.addEventListener('click', (e) => {
-            e.stopPropagation(); // Evita que o evento de clique no documento feche o menu imediatamente
-            languageDropdown.classList.toggle('show');
-            chevronDown.style.transform = languageDropdown.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0deg)';
+    if (langSelector) {
+        langSelector.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
         });
     }
 
-    // Clicar fora do menu fecha-o
-    document.addEventListener('click', (e) => {
-        if (languageDropdown && languageDropdown.classList.contains('show')) {
-            languageDropdown.classList.remove('show');
-            chevronDown.style.transform = 'rotate(0deg)';
-        }
+    document.addEventListener('click', () => {
+        if (langDropdown) langDropdown.style.display = 'none';
     });
+
+    // --- Search Bar ---
+    const searchIcon = document.querySelector('.search-icon');
+    const searchInput = document.querySelector('.search-input');
+
+    if (searchIcon) {
+        searchIcon.addEventListener('click', () => {
+            searchInput.focus();
+        });
+    }
 
     // --- Responsive Navigation (Burger Menu) ---
     const burger = document.querySelector('.burger');
@@ -48,41 +41,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (burger) {
         burger.addEventListener('click', () => {
-            // Adiciona a lógica para mostrar/esconder o menu de navegação em mobile
-            // (Esta parte pode ser mais elaborada com animações)
-            if (navLinks.style.display === 'flex') {
-                navLinks.style.display = 'none';
-            } else {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.alignItems = 'center';
-                navLinks.style.padding = '2rem 0';
-            }
-            burger.classList.toggle('toggle'); // Para animar o ícone do burger
+            navLinks.classList.toggle('nav-active');
         });
     }
-
+    
     // --- App download button alert ---
     const downloadBtn = document.getElementById('download-btn');
-    if (downloadBtn) {
+    if(downloadBtn) {
         downloadBtn.addEventListener('click', () => {
             alert('A aplicação Kêkua Travel está em desenvolvimento e estará disponível em breve!');
         });
     }
-
 });
-
-// Keyframes para a animação do burger (adicionado aqui para garantir que o CSS está completo)
-const styleSheet = document.createElement("style");
-styleSheet.type = "text/css";
-styleSheet.innerText = `
-.burger.toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-.burger.toggle .line2 {
-    opacity: 0;
-}
-.burger.toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-}`;
-document.head.appendChild(styleSheet); 

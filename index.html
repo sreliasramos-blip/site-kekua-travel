@@ -20,7 +20,7 @@
     
     <!-- Libraries -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
@@ -30,45 +30,43 @@
     <header>
         <nav>
             <div class="logo">Kêkua Travel</div>
+            
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Início</a></li>
+                <li><a href="#destino">O Destino</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#pilares">Pilares</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contactos">Contactos</a></li>
+            </ul>
 
-            <div class="search-bar">
-                <input type="text" placeholder="Pesquisar destino...">
-                <i class="fas fa-search"></i>
-            </div>
+            <div class="nav-extras">
+                <div class="search-container">
+                    <input type="text" placeholder="Pesquisar..." class="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
 
-            <div class="nav-right">
                 <div class="language-selector">
                     <div class="current-language">
                         <i class="fas fa-globe"></i>
                         <span>PT</span>
-                        <i class="fas fa-chevron-down"></i>
                     </div>
                     <ul class="language-dropdown">
-                        <li><a href="#">EN (Inglês)</a></li>
-                        <li><a href="#">FR (Francês)</a></li>
-                        <li><a href="#">ES (Espanhol)</a></li>
+                        <li><a href="#">EN</a></li>
+                        <li><a href="#">FR</a></li>
+                        <li><a href="#">ES</a></li>
                     </ul>
                 </div>
 
                 <div class="burger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
+                    <i class="fas fa-bars"></i>
                 </div>
             </div>
         </nav>
-        <ul class="nav-links">
-            <li><a href="#home" class="active">Início</a></li>
-            <li><a href="#destino">O Destino</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#pilares">Pilares</a></li>
-            <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#contactos">Contactos</a></li>
-        </ul>
     </header>
 
     <main>
-        <!-- Hero Section with Slider -->
+        <!-- O resto do seu conteúdo <main> permanece igual -->
         <section id="home" class="hero">
             <div class="swiper-container hero-slider">
                 <div class="swiper-wrapper">
@@ -91,9 +89,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
-                <!-- Add Navigation -->
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
@@ -102,7 +98,6 @@
             </div>
         </section>
 
-        <!-- O Destino Section -->
         <section id="destino" class="fade-in">
             <h2>Um Paraíso por Descobrir</h2>
             <div class="destino-container">
