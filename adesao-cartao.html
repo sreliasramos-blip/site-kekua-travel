@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
+<head><meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adesão ao Cartão - Kêkua Travel</title>
-
-    <!-- SEO, Favicon, Fonts, Libraries -->
     <meta name="description" content="Adira ao Cartão de Viajante Kêkua e tenha acesso a benefícios exclusivos.">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/favicon.png">
@@ -14,124 +11,84 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-
     <style>
-        /* Estilos específicos para a página de adesão */
         .form-section {
-            max-width: 700px;
-            margin: 4rem auto;
-            padding: 3rem;
-            background-color: var(--bg-color);
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 700px; margin: 4rem auto; padding: 3rem; background-color: var(--bg-color);
+            border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
-        .form-section h2 {
-            text-align: center;
-            margin-bottom: 1rem;
-            font-size: 2.5rem;
-        }
-        .form-section p {
-            text-align: center;
-            margin-bottom: 2.5rem;
-            color: #666;
-        }
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
+        .form-section h2 { text-align: center; margin-bottom: 1rem; font-size: 2.5rem; }
+        .form-section p { text-align: center; margin-bottom: 2.5rem; color: #666; }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
         .form-group input {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-family: var(--font-body);
-            font-size: 1rem;
+            width: 100%; padding: 0.8rem; border: 1px solid #ccc;
+            border-radius: 5px; font-family: var(--font-body); font-size: 1rem;
         }
         .submit-button {
-            display: block;
-            width: 100%;
-            background-color: var(--accent-color);
-            color: var(--primary-color);
-            padding: 1rem 2.5rem;
-            border: none;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            cursor: pointer;
-            margin-top: 1rem;
-            text-align: center;
-            font-size: 1.1rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: block; width: 100%; background-color: var(--accent-color); color: var(--primary-color);
+            padding: 1rem 2.5rem; border: none; border-radius: 50px; text-decoration: none;
+            font-weight: 700; cursor: pointer; margin-top: 1rem; text-align: center;
+            font-size: 1.1rem; transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .submit-button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
-        }
+        .submit-button:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3); }
     </style>
 </head>
 <body>
-
-    <header>
-        <nav>
-            <div class="logo">Kêkua Travel</div>
-            <ul class="nav-links">
-                 <li><a href="index.html">Início</a></li>
-                <li><a href="index.html#destino">O Destino</a></li>
-                <li><a href="index.html#sobre">Sobre</a></li>
-                <li><a href="cartao-viajante.html">Cartão Viajante</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-            <div class="nav-extras">
-                 <div class="search-container"><input type="text" placeholder="Pesquisar..." class="search-input"><i class="fas fa-search search-icon"></i></div>
-                <div class="language-selector"><div class="current-language"><i class="fas fa-globe"></i><span>PT</span></div><ul class="language-dropdown"><li><a href="#">EN</a></li><li><a href="#">FR</a></li><li><a href="#">ES</a></li></ul></div>
-                <div class="burger"><i class="fas fa-bars"></i></div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="form-section fade-in">
-            <h2>Adira ao Cartão de Viajante</h2>
-            <p>Preencha os seus dados para receber o seu cartão digital e começar a acumular benefícios.</p>
-            <form id="adesao-form">
-                <div class="form-group">
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" name="nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="nascimento">Data de Nascimento</label>
-                    <input type="date" id="nascimento" name="nascimento" required>
-                </div>
-                <button type="submit" class="submit-button">Criar Cartão Digital</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-col"><div class="logo">Kêkua Travel</div><p>Projeto académico – Prova de Aptidão Profissional (PAP). Este site não representa uma empresa real.</p></div>
-            <div class="footer-col"><h3>Navegação</h3><ul><li><a href="index.html">Início</a></li><li><a href="index.html#destino">O Destino</a></li><li><a href="index.html#sobre">Sobre</a></li><li><a href="cartao-viajante.html">Cartão Viajante</a></li></ul></div>
-            <div class="footer-col"><h3>Siga-nos</h3><div class="social-links"><a href="https://www.instagram.com/kekuatravel?igsh=MXV0Y2U3eWd2ZHU1Mg==" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a><a href="https://www.tiktok.com/@kekuatravel?_r=1&_t=ZG-937tm7KsDiL" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a><a href="https://www.facebook.com/profile.php?id=61586298009020" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a><a href="https://youtube.com/@kekuatravel?si=HzYds9FcWDkWeBB7" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a></div></div>
+<header>
+    <nav>
+        <div class="logo">Kêkua Travel</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html#destino">O Destino</a></li>
+            <li><a href="index.html#sobre">Sobre</a></li>
+            <li><a href="index.html#pilares">Pilares</a></li>
+            <li><a href="cartao-viajante.html">Cartão Viajante</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <div class="nav-extras">
+            <div class="search-container"><input type="text" placeholder="Pesquisar..." class="search-input"><i class="fas fa-search search-icon"></i></div>
+            <div class="language-selector"><div class="current-language"><i class="fas fa-globe"></i><span>PT</span></div><ul class="language-dropdown"><li><a href="#">EN</a></li><li><a href="#">FR</a></li><li><a href="#">ES</a></li></ul></div>
+            <div class="burger"><i class="fas fa-bars"></i></div>
         </div>
-        <div class="footer-bottom"><p>© 2024 Kêkua Travel. Todos os direitos (académicos) reservados.</p></div>
-    </footer>
-    
-    <script>
-        document.getElementById('adesao-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const nome = document.getElementById('nome').value;
-            alert(`Obrigado, ${nome}!\nO seu cartão de viajante digital foi criado com sucesso e será enviado para o seu email.\n(Esta é uma simulação para um projeto académico.)`);
-            this.reset();
-        });
-    </script>
-    <script src="script.js"></script>
+    </nav>
+</header>
+<main>
+    <section class="form-section fade-in">
+        <h2>Adira ao Cartão de Viajante</h2>
+        <p>Preencha os seus dados para receber o seu cartão digital e começar a acumular benefícios.</p>
+        <form id="adesao-form">
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="nascimento">Data de Nascimento</label>
+                <input type="date" id="nascimento" name="nascimento" required>
+            </div>
+            <button type="submit" class="submit-button">Criar Cartão Digital</button>
+        </form>
+    </section>
+</main>
+<footer>
+    <div class="footer-container">
+        <div class="footer-col"><div class="logo">Kêkua Travel</div><p>Projeto académico – Prova de Aptidão Profissional (PAP). Este site não representa uma empresa real.</p></div>
+        <div class="footer-col"><h3>Navegação</h3><ul><li><a href="index.html">Início</a></li><li><a href="index.html#destino">O Destino</a></li><li><a href="index.html#sobre">Sobre</a></li><li><a href="cartao-viajante.html">Cartão Viajante</a></li></ul></div>
+        <div class="footer-col"><h3>Siga-nos</h3><div class="social-links"><a href="https://www.instagram.com/kekuatravel?igsh=MXV0Y2U3eWd2ZHU1Mg==" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a><a href="https://www.tiktok.com/@kekuatravel?_r=1&_t=ZG-937tm7KsDiL" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a><a href="https://www.facebook.com/profile.php?id=61586298009020" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a><a href="https://youtube.com/@kekuatravel?si=HzYds9FcWDkWeBB7" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a></div></div>
+    </div>
+    <div class="footer-bottom"><p>© 2024 Kêkua Travel. Todos os direitos (académicos) reservados.</p></div>
+</footer>
+<script>
+    document.getElementById('adesao-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const nome = document.getElementById('nome').value;
+        alert(`Obrigado, ${nome}!\\nO seu cartão de viajante digital foi criado com sucesso e será enviado para o seu email.\\n(Esta é uma simulação para um projeto académico.)`);
+        this.reset();
+    });
+</script>
+<script src="script.js"></script>
 </body>
 </html>
