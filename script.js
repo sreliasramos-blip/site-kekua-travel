@@ -44,6 +44,22 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinks.classList.toggle('nav-active');
         });
     }
+
+    // --- Scroll Animations ---
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1 // A animação começa quando 10% do elemento está visível
+    });
+
+    const sectionsToAnimate = document.querySelectorAll('.fade-in');
+    sectionsToAnimate.forEach(section => {
+        observer.observe(section);
+    });
     
     // --- App download button alert ---
     const downloadBtn = document.getElementById('download-btn');
