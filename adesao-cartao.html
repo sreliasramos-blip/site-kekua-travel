@@ -77,6 +77,14 @@
         .term-item h4 i {
             color: var(--accent-color);
         }
+        .footer-bottom a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer-bottom a:hover {
+            color: var(--accent-color);
+        }
     </style>
 </head>
 <body>
@@ -168,11 +176,37 @@
     <footer>
         <div class="footer-container">
             <div class="footer-col"><div class="logo">Kêkua Travel</div><p>Projeto académico – Prova de Aptidão Profissional (PAP). Este site não representa uma empresa real.</p></div>
-            <div class="footer-col"><h3>Navegação</h3><ul><li><a href="index.html">Início</a></li><li><a href="index.html#destino">O Destino</a></li><li><a href="index.html#sobre">Sobre</a></li><li><a href="cartao-viajante.html">Cartão Viajante</a></li></ul></div>
+            <div class="footer-col"><h3>Navegação</h3><ul><li><a href="index.html">Início</a></li><li><a href="index.html#destino">O Destino</a></li><li><a href="index.html#sobre">Sobre</a></li><li><a href="cartao-viajante.html">Cartão Viajante</a></li><li><a href="newsletter.html">Newsletter</a></li></ul></div>
             <div class="footer-col"><h3>Siga-nos</h3><div class="social-links"><a href="https://www.instagram.com/kekuatravel?igsh=MXV0Y2U3eWd2ZHU1Mg==" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a><a href="https://www.tiktok.com/@kekuatravel?_r=1&_t=ZG-937tm7KsDiL" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a><a href="https://www.facebook.com/profile.php?id=61586298009020" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a><a href="https://youtube.com/@kekuatravel?si=HzYds9FcWDkWeBB7" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a></div></div>
         </div>
-        <div class="footer-bottom"><p>© 2024 Kêkua Travel. Todos os direitos (académicos) reservados.</p></div>
+        <div class="footer-bottom">
+            <p>© 2024 Kêkua Travel. Todos os direitos (académicos) reservados. | <a href="politica-de-privacidade.html">Política de Privacidade</a> | <a href="https://www.livroreclamacoes.pt/inicio/" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a></p>
+        </div>
     </footer>
+
+    <div class="chat-button">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+
+    <div class="chat-window" id="chat-window">
+        <div class="chat-header">
+            <h3>Chat de Suporte</h3>
+            <button class="close-chat" id="close-chat">&times;</button>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="chat-message bot">Olá! Como posso ajudar? Escolha um tópico ou escreva a sua pergunta.</div>
+        </div>
+        <div class="faq-buttons" id="faq-buttons">
+            <button class="faq-button" data-question="Tipos de experiências">Experiências</button>
+            <button class="faq-button" data-question="Sustentabilidade">Sustentabilidade</button>
+            <button class="faq-button" data-question="Cartão de viajante">Cartão Kêkua</button>
+            <button class="faq-button" data-question="Fazer uma reserva">Reservas</button>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Escreva a sua mensagem...">
+            <button id="send-chat"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
     
     <script>
         document.getElementById('adesao-form').addEventListener('submit', function(e) {

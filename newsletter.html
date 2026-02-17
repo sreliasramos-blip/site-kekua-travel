@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter - Kêkua Travel</title>
+
+    <meta name="description" content="Subscreva a nossa newsletter para receber as últimas novidades e ofertas.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .newsletter-hero {
+            background: var(--bg-color);
+            text-align: center;
+            padding: 10rem 5% 6rem;
+        }
+        .newsletter-hero h1 {
+            font-family: var(--font-logo);
+            font-size: 3.5rem;
+            color: var(--primary-color);
+        }
+        .newsletter-content {
+            max-width: 600px;
+            margin: 4rem auto;
+            padding: 0 5%;
+            text-align: center;
+        }
+        .newsletter-content p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            color: #666;
+        }
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+        }
+        .newsletter-form input {
+            flex-grow: 1;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            font-family: var(--font-body);
+        }
+        .submit-button {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .submit-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+        }
+        .newsletter-tags {
+            margin-top: 3rem;
+            font-style: italic;
+            color: #666;
+        }
+        /* Override para o menu nesta página */
+        header {
+            background-color: var(--bg-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .nav-links a, .logo, .search-icon, .current-language, .burger {
+            color: var(--primary-color) !important;
+            text-shadow: none;
+        }
+        .nav-links a::after {
+            background: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Kêkua Travel</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#destino">O Destino</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#pilares">Pilares</a></li>
+                <li><a href="cartao-viajante.html">Cartão Viajante</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div class="nav-extras">
+                 <div class="search-container"><input type="text" placeholder="Pesquisar..." class="search-input"><i class="fas fa-search search-icon"></i></div>
+                <div class="language-selector"><div class="current-language"><i class="fas fa-globe"></i><span>PT</span></div><ul class="language-dropdown"><li><a href="#">EN</a></li><li><a href="#">FR</a></li><li><a href="#">ES</a></li></ul></div>
+                <div class="burger"><i class="fas fa-bars"></i></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="newsletter-hero">
+            <h1>Junte-se à Nossa Tribo</h1>
+        </section>
+
+        <section class="newsletter-content">
+            <p>Subscreva a nossa newsletter e seja o primeiro a receber as nossas novidades, ofertas exclusivas e histórias inspiradoras sobre São Tomé e Príncipe.</p>
+            
+            <form id="newsletter-form" class="newsletter-form">
+                <input type="email" id="email-newsletter" placeholder="O seu melhor email" required>
+                <button type="submit" class="submit-button">Subscrever</button>
+            </form>
+
+            <div class="newsletter-tags">
+                <p>@newsletter @subscrever @novidades @ofertas</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-bottom">
+        <p>© 2024 Kêkua Travel. Todos os direitos (académicos) reservados. | <a href="politica-de-privacidade.html">Política de Privacidade</a> | <a href="https://www.livroreclamacoes.pt/inicio/" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a></p>
+    </footer>
+
+    <div class="chat-button">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+
+    <div class="chat-window" id="chat-window">
+        <div class="chat-header">
+            <h3>Chat de Suporte</h3>
+            <button class="close-chat" id="close-chat">&times;</button>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="chat-message bot">Olá! Como posso ajudar?</div>
+        </div>
+        <div class="faq-buttons" id="faq-buttons">
+            <button class="faq-button" data-question="Tipos de experiências">Experiências</button>
+            <button class="faq-button" data-question="Sustentabilidade">Sustentabilidade</button>
+            <button class="faq-button" data-question="Cartão de viajante">Cartão Kêkua</button>
+            <button class="faq-button" data-question="Fazer uma reserva">Reservas</button>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Escreva a sua mensagem...">
+            <button id="send-chat"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Obrigado por subscrever a nossa newsletter! (simulação)');
+            document.getElementById('email-newsletter').value = '';
+        });
+    </script>
+</body>
+</html>
