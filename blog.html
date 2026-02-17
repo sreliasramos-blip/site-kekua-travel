@@ -26,33 +26,62 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* Estilos específicos para a página do blog */
-        .blog-header {
-            text-align: center;
-            padding: 5rem 5%;
-            background-color: var(--bg-color);
+        header {
+            position: absolute;
+            width: 100%;
         }
-        .blog-header h1 {
-            font-size: 3rem;
-            color: var(--primary-color);
-            font-family: var(--font-logo);
-        }
-        .blog-content {
+        .card-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/cultura.jpg') no-repeat center center/cover;
+            color: var(--secondary-color);
             text-align: center;
-            padding: 6rem 5%;
-            min-height: 50vh; /* Garante uma altura mínima */
+            padding: 12rem 5% 6rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-        .blog-content h2 {
-            font-size: 2rem;
+        .card-hero h1 {
+            font-family: var(--font-logo);
+            font-size: 3.5rem;
+            color: var(--secondary-color);
             margin-bottom: 1rem;
         }
-        .blog-content p {
-            font-size: 1.2rem;
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            padding: 4rem 5%;
+        }
+        .article-card {
+            background: var(--secondary-color);
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .article-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        .article-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .article-card-content {
+            padding: 1.5rem;
+        }
+        .article-card-content h3 {
+            margin-bottom: 1rem;
+        }
+        .article-card-content p {
             color: #666;
+            margin-bottom: 1.5rem;
+        }
+        .read-more-btn {
+            text-decoration: none;
+            color: var(--accent-color);
+            font-weight: 700;
         }
     </style>
 </head>
@@ -66,8 +95,7 @@
                 <li><a href="index.html#destino">O Destino</a></li>
                 <li><a href="index.html#sobre">Sobre</a></li>
                 <li><a href="index.html#pilares">Pilares</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#contactos">Contactos</a></li>
+                <li><a href="cartao-viajante.html">Cartão Viajante</a></li>
                 <li><a href="blog.html" class="active">Blog</a></li>
             </ul>
             <div class="nav-extras">
@@ -79,20 +107,54 @@
     </header>
 
     <main>
-        <section class="blog-header">
+        <section class="card-hero">
             <h1>O Nosso Diário de Bordo</h1>
         </section>
 
-        <section class="blog-content">
-            <h2>Em Breve...</h2>
-            <p>Novas histórias e aventuras estão a ser preparadas. Volte em breve!</p>
+        <section class="blog-grid">
+            <div class="article-card">
+                <img src="images/hero-background.jpg" alt="Experiências em São Tomé">
+                <div class="article-card-content">
+                    <h3>As Nossas Experiências Autênticas</h3>
+                    <p>Descubra as experiências de turismo que vão além do convencional, desde a imersão cultural aos trilhos na natureza...</p>
+                    <a href="blog-experiencias.html" class="read-more-btn">Ler Mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="article-card">
+                <img src="images/cultura.jpg" alt="Cultura de São Tomé">
+                <div class="article-card-content">
+                    <h3>Cultura e Tradição Santomense</h3>
+                    <p>Mergulhe na alma de um povo, desde a música e dança até à gastronomia única...</p>
+                    <a href="blog-cultura.html" class="read-more-btn">Ler Mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="article-card">
+                <img src="images/natureza.jpg" alt="Turismo Sustentável">
+                <div class="article-card-content">
+                    <h3>Viajar com Consciência: O Nosso Compromisso</h3>
+                    <p>Descubra como o nosso compromisso com a sustentabilidade e a responsabilidade social molda cada viagem...</p>
+                    <a href="blog-sustentabilidade.html" class="read-more-btn">Ler Mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
         </section>
     </main>
 
     <footer>
         <div class="footer-container">
             <div class="footer-col"><div class="logo">Kêkua Travel</div><p>Projeto académico – Prova de Aptidão Profissional (PAP). Este site não representa uma empresa real.</p></div>
-            <div class="footer-col"><h3>Navegação</h3><ul><li><a href="index.html">Início</a></li><li><a href="index.html#destino">O Destino</a></li><li><a href="index.html#sobre">Sobre</a></li>
+            <div class="footer-col">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#destino">O Destino</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="cartao-viajante.html">Cartão Viajante</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                </ul>
+            </div>
             <div class="footer-col"><h3>Siga-nos</h3>
                 <div class="social-links">
                     <a href="https://www.instagram.com/kekuatravel?igsh=MXV0Y2U3eWd2ZHU1Mg==" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
@@ -102,8 +164,34 @@
                 </div>
             </div>
         </div>
-        <div class="footer-bottom"><p>© 2024 Kêkua Travel. Todos os direitos (académicos) reservados.</p></div>
+        <div class="footer-bottom">
+             <p>© 2024 Kêkua Travel. Todos os direitos (académicos) reservados. | <a href="politica-de-privacidade.html">Política de Privacidade</a> | <a href="https://www.livroreclamacoes.pt/inicio/" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a></p>
+        </div>
     </footer>
+
+    <div class="chat-button">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+
+    <div class="chat-window" id="chat-window">
+        <div class="chat-header">
+            <h3>Chat de Suporte</h3>
+            <button class="close-chat" id="close-chat">&times;</button>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="chat-message bot">Olá! Como posso ajudar? Escolha um tópico ou escreva a sua pergunta.</div>
+        </div>
+        <div class="faq-buttons" id="faq-buttons">
+            <button class="faq-button" data-question="Tipos de experiências">Experiências</button>
+            <button class="faq-button" data-question="Sustentabilidade">Sustentabilidade</button>
+            <button class="faq-button" data-question="Cartão de viajante">Cartão Kêkua</button>
+            <button class="faq-button" data-question="Fazer uma reserva">Reservas</button>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Escreva a sua mensagem...">
+            <button id="send-chat"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
     
     <script src="script.js"></script>
 </body>

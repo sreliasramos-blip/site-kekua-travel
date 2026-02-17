@@ -26,6 +26,63 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        header {
+            position: absolute;
+            width: 100%;
+        }
+        .contact-form {
+            margin-top: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: var(--font-body);
+        }
+        .form-group textarea {
+            min-height: 150px;
+        }
+        .submit-button {
+            display: block;
+            width: 100%;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            cursor: pointer;
+            text-align: center;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .submit-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+        }
+        .footer-bottom a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer-bottom a:hover {
+            color: var(--accent-color);
+        }
+    </style>
 </head>
 <body>
 
@@ -33,6 +90,7 @@
         <nav>
             <div class="logo">Kêkua Travel</div>
             <ul class="nav-links">
+                <div class="close-menu"><i class="fas fa-times"></i></div>
                 <li><a href="#home" class="active">Início</a></li>
                 <li><a href="#destino">O Destino</a></li>
                 <li><a href="#sobre">Sobre</a></li>
@@ -149,7 +207,7 @@
             </div>
         </section>
 
-        <!-- SECÇÃO "CONTACTOS" RESTAURADA -->
+        <!-- SECÇÃO "CONTACTOS" ATUALIZADA -->
         <section id="contactos" class="fade-in">
             <h2>Fale Connosco</h2>
             <div class="contactos-wrapper">
@@ -157,16 +215,35 @@
                 <div class="contact-card"><i class="fas fa-phone"></i><h3>Telefone</h3><p>Disponíveis para o ajudar no seu plano de viagem.</p><span>+351 939 769 291</span></div>
                 <div class="contact-card"><i class="fas fa-map-marker-alt"></i><h3>Localização</h3><p>A nossa equipa encontra-se em Portugal.</p><span>Portugal</span></div>
             </div>
+
+            <form action="#" method="POST" class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="assunto">Assunto</label>
+                    <input type="text" id="assunto" name="assunto" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Enviar Mensagem</button>
+            </form>
         </section>
 
-        <!-- SECÇÃO "APP DOWNLOAD" RESTAURADA -->
+        <!-- SECÇÃO "APP DOWNLOAD" ATUALIZADA -->
         <section id="app-download" class="fade-in">
             <div class="app-download-container">
                 <div class="app-download-text">
                     <h2>A Aventura na Palma da Mão</h2>
-                    <p>Brevemente, a nossa aplicação exclusiva estará disponível com roteiros interativos, dicas locais e muito mais. Prepare-se para levar a Kêkua Travel consigo para todo o lado.</p>
-                    <button id="download-btn">Descarregar a App</button>
-                    <p class="app-status">Em desenvolvimento</p>
+                    <p>A nossa aplicação exclusiva já está disponível, com roteiros interativos, dicas locais e muito mais. Leve a Kêkua Travel consigo para todo o lado!</p>
+                    <a href="#" id="download-btn" class="cta-button">Descarregar a App</a>
                 </div>
             </div>
         </section>
@@ -175,7 +252,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-col"><div class="logo">Kêkua Travel</div><p>Projeto académico – Prova de Aptidão Profissional (PAP). Este site não representa uma empresa real.</p></div>
-            <div class="footer-col"><h3>Navegação</h3><ul><li><a href="index.html">Início</a></li><li><a href="index.html#destino">O Destino</a></li><li><a href="index.html#sobre">Sobre</a></li><li><a href="#galeria">Galeria</a></li></ul></div>
+            <div class="footer-col"><h3>Navegação</h3><ul><li><a href="index.html">Início</a></li><li><a href="index.html#destino">O Destino</a></li><li><a href="index.html#sobre">Sobre</a></li><li><a href="#galeria">Galeria</a></li><li><a href="newsletter.html">Newsletter</a></li></ul></div>
             <div class="footer-col"><h3>Siga-nos</h3>
                 <div class="social-links">
                     <a href="https://www.instagram.com/kekuatravel?igsh=MXV0Y2U3eWd2ZHU1Mg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -185,8 +262,34 @@
                 </div>
             </div>
         </div>
-        <div class="footer-bottom"><p>© 2024 Kêkua Travel. Todos os direitos (académicos) reservados.</p></div>
+        <div class="footer-bottom">
+            <p>© 2024 Kêkua Travel. Todos os direitos (académicos) reservados. | <a href="politica-de-privacidade.html">Política de Privacidade</a> | <a href="https://www.livroreclamacoes.pt/inicio/" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a></p>
+        </div>
     </footer>
+
+    <div class="chat-button">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+
+    <div class="chat-window" id="chat-window">
+        <div class="chat-header">
+            <h3>Chat de Suporte</h3>
+            <button class="close-chat" id="close-chat">&times;</button>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="chat-message bot">Olá! Como posso ajudar? Escolha um tópico ou escreva a sua pergunta.</div>
+        </div>
+        <div class="faq-buttons" id="faq-buttons">
+            <button class="faq-button" data-question="Tipos de experiências">Experiências</button>
+            <button class="faq-button" data-question="Sustentabilidade">Sustentabilidade</button>
+            <button class="faq-button" data-question="Cartão de viajante">Cartão Kêkua</button>
+            <button class="faq-button" data-question="Fazer uma reserva">Reservas</button>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Escreva a sua mensagem...">
+            <button id="send-chat"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
     
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
