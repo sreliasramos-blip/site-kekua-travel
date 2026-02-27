@@ -81,12 +81,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Responsive Navigation (Burger Menu) ---
     const burger = document.querySelector('.burger');
     const navLinks = document.querySelector('.nav-links');
+    const closeMenu = document.querySelector('.close-menu');
 
     if (burger && navLinks) {
         burger.addEventListener('click', () => {
-            navLinks.classList.toggle('nav-active');
+            navLinks.classList.add('nav-active');
         });
     }
+
+    if (closeMenu && navLinks) {
+        closeMenu.addEventListener('click', () => {
+            navLinks.classList.remove('nav-active');
+        });
+    }
+
+    // Fechar ao clicar num link (para UX melhor em SPAs ou ancoras)
+    const links = document.querySelectorAll('.nav-links a');
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('nav-active');
+        });
+    });
 
     // --- Scroll Animations ---
     const observer = new IntersectionObserver((entries) => {
@@ -108,8 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const downloadBtn = document.getElementById('download-btn');
     if(downloadBtn) {
         downloadBtn.addEventListener('click', (e) => {
-            e.preventDefault(); // Previne o comportamento padrão do link
-            // Futuramente, pode adicionar aqui o link real da app
+            e.preventDefault(); 
             alert('Obrigado por descarregar a nossa app! (simulação)');
         });
     }
@@ -181,7 +195,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const userKeywords = normalizedUserMessage.split(/\s+/);
             let foundItems = [];
 
-            // Pesquisa na base de conhecimento
             knowledgeBase.forEach(item => {
                 const matchedTags = item.tags.filter(tag => userKeywords.includes(normalizeText(tag)));
                 if (matchedTags.length > 0) {
@@ -200,7 +213,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Resposta por defeito
             let response = {
                 text: 'Não encontrei uma resposta para a sua pergunta. Se quiser, pode preencher o nosso formulário de contacto e a nossa equipa responderá assim que possível.',
                 button: { text: 'Aceder ao Formulário', link: 'index.html#contactos' }

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adesão ao Cartão - Kêkua Travel</title>
 
-    <!-- SEO, Favicon, Fonts, Libraries -->
     <meta name="description" content="Adira ao Cartão de Viajante Kêkua e tenha acesso a benefícios exclusivos.">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/favicon.png">
@@ -16,6 +15,10 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+        header ul a {
+            color: #000; /* Define a cor do texto como preto para visibilidade */
+            text-decoration: none;
+        }
         /* Estilos da página de adesão */
         .form-section {
             max-width: 700px;
@@ -89,133 +92,133 @@
 </head>
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">Kêkua Travel</div>
-            <ul class="nav-links">
-                 <li><a href="index.html">Início</a></li>
-                <li><a href="index.html#destino">O Destino</a></li>
-                <li><a href="index.html#sobre">Sobre</a></li>
-                <li><a href="index.html#pilares">Pilares</a></li>
-                <li><a href="cartao-viajante.html">Cartão Viajante</a></li>
-                <li><a href="blog.html">Blog</a></li>
+<header>
+    <nav>
+        <div class="logo">Kêkua Travel</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html#destino">O Destino</a></li>
+            <li><a href="index.html#sobre">Sobre</a></li>
+            <li><a href="index.html#pilares">Pilares</a></li>
+            <li><a href="cartao-viajante.html">Cartão Viajante</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <div class="nav-extras">
+            <div class="search-container"><input type="text" placeholder="Pesquisar..." class="search-input"><i class="fas fa-search search-icon"></i></div>
+            <div class="language-selector"><div class="current-language"><i class="fas fa-globe"></i><span>PT</span></div><ul class="language-dropdown"><li><a href="#">EN</a></li><li><a href="#">FR</a></li><li><a href="#">ES</a></li></ul></div>
+            <div class="burger"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="form-section">
+        <a href="cartao-viajante.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar</a>
+        <h2>Adira ao Cartão de Viajante</h2>
+        <p>Preencha os seus dados para receber o seu cartão digital e começar a acumular benefícios.</p>
+
+        <div class="points-explainer">
+            <h3>Como Acumular Pontos Kêkua</h3>
+            <ul>
+                <li><i class="fas fa-check"></i> <strong>1 Ponto</strong> por cada <strong>1€</strong> gasto em reservas de viagens.</li>
+                <li><i class="fas fa-check"></i> <strong>50 Pontos de Bónus</strong> de boas-vindas na adesão ao cartão.</li>
+                <li><i class="fas fa-check"></i> <strong>100 Pontos</strong> por cada amigo que viajar connosco através da sua recomendação.</li>
             </ul>
-            <div class="nav-extras">
-                 <div class="search-container"><input type="text" placeholder="Pesquisar..." class="search-input"><i class="fas fa-search search-icon"></i></div>
-                <div class="language-selector"><div class="current-language"><i class="fas fa-globe"></i><span>PT</span></div><ul class="language-dropdown"><li><a href="#">EN</a></li><li><a href="#">FR</a></li><li><a href="#">ES</a></li></ul></div>
-                <div class="burger"><i class="fas fa-bars"></i></div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="form-section">
-            <a href="cartao-viajante.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar</a>
-            <h2>Adira ao Cartão de Viajante</h2>
-            <p>Preencha os seus dados para receber o seu cartão digital e começar a acumular benefícios.</p>
-
-            <div class="points-explainer">
-                <h3>Como Acumular Pontos Kêkua</h3>
-                <ul>
-                    <li><i class="fas fa-check"></i> <strong>1 Ponto</strong> por cada <strong>1€</strong> gasto em reservas de viagens.</li>
-                    <li><i class="fas fa-check"></i> <strong>50 Pontos de Bónus</strong> de boas-vindas na adesão ao cartão.</li>
-                    <li><i class="fas fa-check"></i> <strong>100 Pontos</strong> por cada amigo que viajar connosco através da sua recomendação.</li>
-                </ul>
-            </div>
-
-            <div class="points-explainer">
-                <h3>Como Usar os Seus Pontos</h3>
-                <ul>
-                    <li><i class="fas fa-gift"></i> <strong>500 Pontos:</strong> 5% de desconto na sua próxima viagem.</li>
-                    <li><i class="fas fa-gifts"></i> <strong>1000 Pontos:</strong> 10% de desconto na sua próxima viagem.</li>
-                    <li><i class="fas fa-concierge-bell"></i> <strong>2000 Pontos:</strong> Um upgrade de alojamento ou uma experiência local gratuita (sujeito a disponibilidade).</li>
-                </ul>
-            </div>
-
-            <form id="adesao-form">
-                <div class="form-group">
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" name="nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="nascimento">Data de Nascimento</label>
-                    <input type="date" id="nascimento" name="nascimento" required>
-                </div>
-                <button type="submit" class="submit-button">Criar Cartão Digital</button>
-            </form>
-        </section>
-
-        <section class="terms-section">
-            <h3>Condições de Utilização</h3>
-            <div class="terms-grid">
-                <div class="term-item">
-                    <h4><i class="fas fa-ban"></i> Fraude</h4>
-                    <p>A utilização fraudulenta (ex: venda de pontos) resulta no cancelamento imediato do cartão e dos pontos acumulados.</p>
-                </div>
-                <div class="term-item">
-                    <h4><i class="fas fa-shield-alt"></i> Proteção de Dados</h4>
-                    <p>Os seus dados são usados exclusivamente para a gestão do programa. Pode retirar o consentimento para marketing a qualquer momento.</p>
-                </div>
-                <div class="term-item">
-                    <h4><i class="fas fa-file-signature"></i> Alteração de Termos</h4>
-                    <p>As regras podem ser alteradas. Mudanças importantes serão comunicadas com 30 dias de antecedência.</p>
-                </div>
-                <div class="term-item">
-                    <h4><i class="fas fa-id-card"></i> Uso Pessoal</h4>
-                    <p>O cartão e os pontos são pessoais e intransmissíveis, sendo necessária a sua identificação para usar os benefícios.</p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-col"><div class="logo">Kêkua Travel</div><p>Projeto académico – Prova de Aptidão Profissional (PAP). Este site não representa uma empresa real.</p></div>
-            <div class="footer-col"><h3>Navegação</h3><ul><li><a href="index.html">Início</a></li><li><a href="index.html#destino">O Destino</a></li><li><a href="index.html#sobre">Sobre</a></li><li><a href="cartao-viajante.html">Cartão Viajante</a></li><li><a href="newsletter.html">Newsletter</a></li></ul></div>
-            <div class="footer-col"><h3>Siga-nos</h3><div class="social-links"><a href="https://www.instagram.com/kekuatravel?igsh=MXV0Y2U3eWd2ZHU1Mg==" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a><a href="https://www.tiktok.com/@kekuatravel?_r=1&_t=ZG-937tm7KsDiL" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a><a href="https://www.facebook.com/profile.php?id=61586298009020" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a><a href="https://youtube.com/@kekuatravel?si=HzYds9FcWDkWeBB7" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a></div></div>
         </div>
-        <div class="footer-bottom">
-            <p>© 2024 Kêkua Travel. Todos os direitos (académicos) reservados. | <a href="politica-de-privacidade.html">Política de Privacidade</a> | <a href="https://www.livroreclamacoes.pt/inicio/" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a></p>
-        </div>
-    </footer>
 
-    <div class="chat-button">
-        <i class="fas fa-comment-dots"></i>
+        <div class="points-explainer">
+            <h3>Como Usar os Seus Pontos</h3>
+            <ul>
+                <li><i class="fas fa-gift"></i> <strong>500 Pontos:</strong> 5% de desconto na sua próxima viagem.</li>
+                <li><i class="fas fa-gifts"></i> <strong>1000 Pontos:</strong> 10% de desconto na sua próxima viagem.</li>
+                <li><i class="fas fa-concierge-bell"></i> <strong>2000 Pontos:</strong> Um upgrade de alojamento ou uma experiência local gratuita (sujeito a disponibilidade).</li>
+            </ul>
+        </div>
+
+        <form id="adesao-form">
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="nascimento">Data de Nascimento</label>
+                <input type="date" id="nascimento" name="nascimento" required>
+            </div>
+            <button type="submit" class="submit-button">Criar Cartão Digital</button>
+        </form>
+    </section>
+
+    <section class="terms-section">
+        <h3>Condições de Utilização</h3>
+        <div class="terms-grid">
+            <div class="term-item">
+                <h4><i class="fas fa-ban"></i> Fraude</h4>
+                <p>A utilização fraudulenta (ex: venda de pontos) resulta no cancelamento imediato do cartão e dos pontos acumulados.</p>
+            </div>
+            <div class="term-item">
+                <h4><i class="fas fa-shield-alt"></i> Proteção de Dados</h4>
+                <p>Os seus dados são usados exclusivamente para a gestão do programa. Pode retirar o consentimento para marketing a qualquer momento.</p>
+            </div>
+            <div class="term-item">
+                <h4><i class="fas fa-file-signature"></i> Alteração de Termos</h4>
+                <p>As regras podem ser alteradas. Mudanças importantes serão comunicadas com 30 dias de antecedência.</p>
+            </div>
+            <div class="term-item">
+                <h4><i class="fas fa-id-card"></i> Uso Pessoal</h4>
+                <p>O cartão e os pontos são pessoais e intransmissíveis, sendo necessária a sua identificação para usar os benefícios.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-col"><div class="logo">Kêkua Travel</div><p>Projeto académico – Prova de Aptidão Profissional (PAP). Este site não representa uma empresa real.</p></div>
+        <div class="footer-col"><h3>Navegação</h3><ul><li><a href="index.html">Início</a></li><li><a href="index.html#destino">O Destino</a></li><li><a href="index.html#sobre">Sobre</a></li><li><a href="cartao-viajante.html">Cartão Viajante</a></li><li><a href="newsletter.html">Newsletter</a></li></ul></div>
+        <div class="footer-col"><h3>Siga-nos</h3><div class="social-links"><a href="https://www.instagram.com/kekuatravel?igsh=MXV0Y2U3eWd2ZHU1Mg==" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a><a href="https://www.tiktok.com/@kekuatravel?_r=1&_t=ZG-937tm7KsDiL" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a><a href="https://www.facebook.com/profile.php?id=61586298009020" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a><a href="https://youtube.com/@kekuatravel?si=HzYds9FcWDkWeBB7" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a></div></div>
     </div>
-
-    <div class="chat-window" id="chat-window">
-        <div class="chat-header">
-            <h3>Chat de Suporte</h3>
-            <button class="close-chat" id="close-chat">&times;</button>
-        </div>
-        <div class="chat-body" id="chat-body">
-            <div class="chat-message bot">Olá! Como posso ajudar? Escolha um tópico ou escreva a sua pergunta.</div>
-        </div>
-        <div class="faq-buttons" id="faq-buttons">
-            <button class="faq-button" data-question="Tipos de experiências">Experiências</button>
-            <button class="faq-button" data-question="Sustentabilidade">Sustentabilidade</button>
-            <button class="faq-button" data-question="Cartão de viajante">Cartão Kêkua</button>
-            <button class="faq-button" data-question="Fazer uma reserva">Reservas</button>
-        </div>
-        <div class="chat-footer">
-            <input type="text" id="chat-input" placeholder="Escreva a sua mensagem...">
-            <button id="send-chat"><i class="fas fa-paper-plane"></i></button>
-        </div>
+    <div class="footer-bottom">
+        <p>© 2024 Kêkua Travel. Todos os direitos (académicos) reservados. | <a href="politica-de-privacidade.html">Política de Privacidade</a> | <a href="https://www.livroreclamacoes.pt/inicio/" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a></p>
     </div>
-    
-    <script>
-        document.getElementById('adesao-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const nome = document.getElementById('nome').value;
-            alert(`Obrigado, ${nome}!\nO seu cartão de viajante digital foi criado com sucesso e será enviado para o seu email.\n(Esta é uma simulação para um projeto académico.)`);
-            this.reset();
-        });
-    </script>
-    <script src="script.js"></script>
+</footer>
+
+<div class="chat-button">
+    <i class="fas fa-comment-dots"></i>
+</div>
+
+<div class="chat-window" id="chat-window">
+    <div class="chat-header">
+        <h3>Chat de Suporte</h3>
+        <button class="close-chat" id="close-chat">&times;</button>
+    </div>
+    <div class="chat-body" id="chat-body">
+        <div class="chat-message bot">Olá! Como posso ajudar? Escolha um tópico ou escreva a sua pergunta.</div>
+    </div>
+    <div class="faq-buttons" id="faq-buttons">
+        <button class="faq-button" data-question="Tipos de experiências">Experiências</button>
+        <button class="faq-button" data-question="Sustentabilidade">Sustentabilidade</button>
+        <button class="faq-button" data-question="Cartão de viajante">Cartão Kêkua</button>
+        <button class="faq-button" data-question="Fazer uma reserva">Reservas</button>
+    </div>
+    <div class="chat-footer">
+        <input type="text" id="chat-input" placeholder="Escreva a sua mensagem...">
+        <button id="send-chat"><i class="fas fa-paper-plane"></i></button>
+    </div>
+</div>
+
+<script>
+    document.getElementById('adesao-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const nome = document.getElementById('nome').value;
+        alert(`Obrigado, ${nome}!\nO seu cartão de viajante digital foi criado com sucesso e será enviado para o seu email.\n(Esta é uma simulação para um projeto académico.)`);
+        this.reset();
+    });
+</script>
+<script src="script.js"></script>
 </body>
 </html>

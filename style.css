@@ -1,3 +1,4 @@
+
 :root {
     --primary-color: #1a1a1a;
     --secondary-color: #ffffff;
@@ -20,7 +21,7 @@ h1,h2,h3,h4,h5,h6 { color: var(--primary-color); font-family: var(--font-body); 
 section { padding: 6rem 8%; overflow-x: clip; }
 
 /* --- Header & Slider (Não mexer) --- */
-header { background-color: transparent; padding: 1rem 5%; position: sticky; top: 0; z-index: 1000; }
+header { background-color: var(--primary-color); padding: 1rem 5%; position: sticky; top: 0; z-index: 1000; }
 nav { display: flex; justify-content: space-between; align-items: center; width: 100%; }
 .logo { font-family: var(--font-logo); font-size: 2rem; color: var(--accent-color); letter-spacing: 1px; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
 .nav-links { display: flex; list-style: none; gap: 35px; }
@@ -359,4 +360,21 @@ footer { background: #111; color: #aaa; padding: 4rem 8% 2rem; }
     .search-container { display: none; }
     .logo { font-size: 1.8rem; }
     .footer-container { grid-template-columns: 1fr; }
+    
+    /* Melhorias no Hero (Mobile) */
+    .hero { height: 70vh; }
+    .hero-content h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .hero-content p { font-size: 1rem; }
+    .pap-aviso { width: 90%; font-size: 0.75rem; padding: 0.5rem; bottom: 10px; }
+    
+    /* Melhorias Gerais Mobile */
+    h2 { font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center; }
+    .destino-text h3 { font-size: 1.4rem; }
+    .contactos-wrapper { gap: 1rem; }
+}
+
+@media (max-width: 480px) {
+    .hero { height: 60vh; }
+    .hero-content h1 { font-size: 1.6rem; }
+    section { padding: 3rem 5%; }
 }
