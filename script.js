@@ -3,6 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Base de Dados do Blog e Páginas ---
     const knowledgeBase = [
         {
+            title: 'O Segredo do Centro do Mundo (Novo)',
+            link: 'blog-stp-imersao.html',
+            tags: ['imersao', 'antropologia', 'centro do mundo', 'cao grande', 'chocolate', 'leve-leve', 'experiencia profunda', 'verdade', 'essencia']
+        },
+        {
             title: 'As Nossas Experiências Autênticas',
             link: 'blog-experiencias.html',
             tags: ['experiências', 'tipos', 'imersao', 'etnobotanico', 'trilhos', 'roteiros', 'sustentavel', 'turismo']
@@ -95,7 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Fechar ao clicar num link (para UX melhor em SPAs ou ancoras)
     const links = document.querySelectorAll('.nav-links a');
     links.forEach(link => {
         link.addEventListener('click', () => {
