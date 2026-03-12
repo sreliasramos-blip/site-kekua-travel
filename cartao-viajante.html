@@ -16,7 +16,7 @@
     <title>Cartão Viajante - Kêkua Travel</title>
 
     <!-- SEO, Favicon, Fonts, Libraries -->
-    <meta name="description" content="Adira ao Cartão de Viajante Kêkua e tenha acesso a benefícios exclusivos.">
+    <meta name="description" content="Aceda a vantagens exclusivas com o Cartão Viajante Kêkua Travel.">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,10 +26,15 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+        header {
+            position: absolute;
+            width: 100%;
+        }
         .card-hero {
-            background: var(--bg-color);
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-background.jpg') no-repeat center center/cover;
+            color: var(--secondary-color);
             text-align: center;
-            padding: 10rem 5% 6rem;
+            padding: 12rem 5% 6rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -38,82 +43,78 @@
         .card-hero h1 {
             font-family: var(--font-logo);
             font-size: 3.5rem;
-            color: var(--primary-color);
+            color: var(--secondary-color);
             margin-bottom: 1rem;
         }
-        .card-hero p {
-            color: var(--text-color);
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 4rem 5%;
         }
-        .card-image {
-            max-width: 500px;
-            width: 100%;
-            margin-top: 3rem;
-            border-radius: 15px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-        }
-        .benefits-section {
-             max-width: 900px;
-             margin: 0 auto;
-             padding-top: 6rem;
-        }
-        .benefits-section h2 {
+        .benefit-card {
+            background: var(--secondary-color);
+            padding: 2.5rem;
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 4rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
         }
-        .benefits-section .benefit {
-            display: flex;
-            align-items: center;
-            gap: 2.5rem;
-            margin-bottom: 4rem;
-        }
-        .benefits-section .benefit:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-        .benefit-icon {
-            font-size: 4rem;
-            color: var(--accent-color);
-            flex-shrink: 0;
-            width: 80px;
-            text-align: center;
-        }
-        .benefit-text h3 {
-             margin-bottom: 0.5rem;
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--primary-color);
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-top: 2rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .cta-button:hover {
+        .benefit-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
         }
-        /* Override para o menu nesta página */
-        header {
-            background-color: var(--bg-color);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .nav-links a, .logo, .search-icon, .current-language, .burger {
-            color: var(--primary-color) !important; /* Força a cor do texto a ser escura */
-            text-shadow: none; /* Remove a sombra do logo */
-        }
-        .nav-links a::after {
-            background: var(--primary-color);
-        }
-        .footer-bottom a {
-            color: #aaa;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        .footer-bottom a:hover {
+        .benefit-card i {
+            font-size: 3rem;
             color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+        .cta-section {
+            background-color: var(--bg-color);
+            text-align: center;
+            padding: 4rem 5%;
+        }
+        .card-visual {
+            max-width: 450px;
+            margin: 2rem auto;
+            background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+            padding: 2.5rem;
+            border-radius: 15px;
+            color: white;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            text-align: left;
+            overflow: hidden;
+        }
+        .card-visual::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,215,0,0.1) 0%, transparent 70%);
+        }
+        .card-visual .logo {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        .card-number {
+            font-family: monospace;
+            font-size: 1.4rem;
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+        }
+        .card-holder {
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        .card-chip {
+            width: 50px;
+            height: 40px;
+            background: linear-gradient(135deg, #d4af37 0%, #f9d976 100%);
+            border-radius: 5px;
+            margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -127,9 +128,8 @@
                 <li><a href="index.html">Início</a></li>
                 <li><a href="index.html#destino">O Destino</a></li>
                 <li><a href="index.html#sobre">Sobre</a></li>
-                <li><a href="index.html#pilares">Pilares</a></li>
-                <li><a href="cartao-viajante.html" class="active">Cartão Viajante</a></li>
                 <li><a href="blog.html">Blog</a></li>
+                <li><a href="cartao-viajante.html" class="active">Cartão Viajante</a></li>
             </ul>
             <div class="nav-extras">
                  <div class="search-container"><input type="text" placeholder="Pesquisar..." class="search-input"><i class="fas fa-search search-icon"></i></div>
@@ -142,51 +142,63 @@
     <main>
         <section class="card-hero">
             <h1>Cartão Viajante Kêkua</h1>
-            <p>A sua fidelidade merece ser recompensada. Entre num mundo de benefícios exclusivos.</p>
-            <img src="images/cartao-viajante.png" alt="Cartão de Viajante Kêkua" class="card-image">
+            <p>Mais do que um cartão, uma porta de entrada para experiências únicas.</p>
         </section>
 
-        <section class="benefits-section">
-            <h2>Vantagens Exclusivas</h2>
-            <div class="benefit">
-                <i class="fas fa-star benefit-icon"></i>
-                <div class="benefit-text">
-                    <h3>Acumule Pontos Kêkua</h3>
-                    <p>Cada euro gasto nas suas viagens connosco converte-se em Pontos Kêkua. Troque os seus pontos por descontos em futuras viagens, experiências locais ou upgrades de alojamento.</p>
-                </div>
+        <section class="benefits-grid">
+            <div class="benefit-card">
+                <i class="fas fa-percent"></i>
+                <h3>Descontos Exclusivos</h3>
+                <p>Aproveite descontos especiais em alojamento, restauração e atividades locais selecionadas.</p>
             </div>
-            <div class="benefit">
-                <i class="fas fa-percent benefit-icon"></i>
-                <div class="benefit-text">
-                    <h3>Descontos em Parceiros</h3>
-                    <p>Apresente o seu cartão digital e beneficie de descontos imediatos em restaurantes, lojas de artesanato e atividades nos nossos parceiros selecionados em São Tomé e Príncipe.</p>
-                </div>
+            <div class="benefit-card">
+                <i class="fas fa-star"></i>
+                <h3>Experiências VIP</h3>
+                <p>Acesso antecipado a roteiros temáticos e convites para eventos culturais exclusivos.</p>
             </div>
-            <div class="benefit">
-                <i class="fas fa-door-open benefit-icon"></i>
-                <div class="benefit-text">
-                    <h3>Acesso Antecipado</h3>
-                    <p>Seja o primeiro a saber sobre as nossas novas rotas e pacotes de viagem. Os membros do Cartão Viajante têm acesso prioritário a reservas e campanhas exclusivas.</p>
-                </div>
+            <div class="benefit-card">
+                <i class="fas fa-leaf"></i>
+                <h3>Impacto Direto</h3>
+                <p>Uma percentagem da taxa de adesão reverte para projetos de conservação ambiental em São Tomé.</p>
             </div>
         </section>
 
-        <section style="text-align: center; background-color: var(--bg-color);">
-            <h2>Pronto para Começar a Viajar com Vantagens?</h2>
-            <p>A adesão é simples, digital e gratuita. Crie já o seu cartão.</p>
-            <a href="adesao-cartao.html" class="cta-button">Aderir ao Cartão</a>
+        <section class="cta-section">
+            <h2>O seu passaporte para o autêntico</h2>
+            <div class="card-visual">
+                <div class="card-chip"></div>
+                <div class="logo">Kêkua Travel</div>
+                <div class="card-number">**** **** **** 2024</div>
+                <div class="card-holder">Seu Nome Aqui</div>
+            </div>
+            <p style="margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Junte-se à nossa comunidade de viajantes conscientes e comece a desfrutar de um mundo de vantagens em São Tomé e Príncipe.</p>
+            <a href="adesao-cartao.html" class="submit-button" style="display: inline-block; width: auto;">Aderir Agora</a>
         </section>
-
     </main>
 
     <footer>
         <div class="footer-container">
             <div class="footer-col"><div class="logo">Kêkua Travel</div><p>Projeto académico – Prova de Aptidão Profissional (PAP). Este site não representa uma empresa real.</p></div>
-            <div class="footer-col"><h3>Navegação</h3><ul><li><a href="index.html">Início</a></li><li><a href="index.html#destino">O Destino</a></li><li><a href="index.html#sobre">Sobre</a></li><li><a href="cartao-viajante.html">Cartão Viajante</a></li><li><a href="newsletter.html">Newsletter</a></li></ul></div>
-            <div class="footer-col"><h3>Siga-nos</h3><div class="social-links"><a href="https://www.instagram.com/kekuatravel?igsh=MXV0Y2U3eWd2ZHU1Mg==" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a><a href="https://www.tiktok.com/@kekuatravel?_r=1&_t=ZG-937tm7KsDiL" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a><a href="https://www.facebook.com/profile.php?id=61586298009020" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a><a href="https://youtube.com/@kekuatravel?si=HzYds9FcWDkWeBB7" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a></div></div>
+            <div class="footer-col">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#destino">O Destino</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                </ul>
+            </div>
+            <div class="footer-col"><h3>Siga-nos</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/kekuatravel?igsh=MXV0Y2U3eWd2ZHU1Mg==" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@kekuatravel?_r=1&_t=ZG-937tm7KsDiL" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://youtube.com/@kekuatravel?si=HzYds9FcWDkWeBB7" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2024 Kêkua Travel. Todos os direitos (académicos) reservados. | <a href="politica-de-privacidade.html">Política de Privacidade</a> | <a href="https://www.livroreclamacoes.pt/inicio/" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a></p>
+             <p>© 2025 Kêkua Travel. Todos os direitos (académicos) reservados. | <a href="politica-de-privacidade.html">Política de Privacidade</a> | <a href="https://www.livroreclamacoes.pt/inicio/" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a></p>
         </div>
     </footer>
 
