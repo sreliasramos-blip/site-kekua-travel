@@ -3,9 +3,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Base de Dados do Blog e Páginas ---
     const knowledgeBase = [
         {
-            title: 'O Segredo do Centro do Mundo (Novo)',
+            title: 'Vinho de Palma de São Tomé e Príncipe (Novo)',
+            link: 'blog-vinho-palma.html',
+            tags: ['vinho', 'vinho de palma', 'palmeira demdem', 'vinhodesaotome', 'bebida tradicional', 'seiva', 'fermentacao', 'bebidas', 'palmeira', 'demdem']
+        },
+        {
+            title: 'Gastronomia de São Tomé e Príncipe',
+            link: 'blog-gastronomia.html',
+            tags: ['gastronomia', 'comida', 'comer', 'pratos', 'calulu', 'peixe', 'marisco', 'cacau', 'chocolate', 'frutas', 'vinho da parma', 'cafe', 'sabores', 'receitas', 'tradicional']
+        },
+        {
+            title: 'Biodiversidade de São Tomé e Príncipe',
+            link: 'blog-biodiversidade.html',
+            tags: ['biodiversidade', 'natureza', 'ecoturismo', 'vida selvagem', 'obo', 'parque natural', 'aves', 'endemicas', 'fauna', 'flora', 'conservacao', 'sustentabilidade', 'meio ambiente', 'marinha', 'tartarugas', 'baleias', 'golfinhos']
+        },
+        {
+            title: 'O Centro do Mundo e o Estilo de Vida Leve-Leve',
             link: 'blog-stp-imersao.html',
-            tags: ['imersao', 'antropologia', 'centro do mundo', 'cao grande', 'chocolate', 'leve-leve', 'experiencia profunda', 'verdade', 'essencia']
+            tags: ['imersao', 'antropologia', 'centro do mundo', 'equador', 'greenwich', 'geografia', 'cao grande', 'chocolate', 'cacau', 'cafe', 'leve-leve', 'experiencia', 'cultura', 'calulu']
         },
         {
             title: 'As Nossas Experiências Autênticas',
@@ -196,15 +211,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function getBotResponse(userMessage) {
             const normalizedUserMessage = normalizeText(userMessage);
-            const userKeywords = normalizedUserMessage.split(/\s+/);
             let foundItems = [];
 
             knowledgeBase.forEach(item => {
-                const matchedTags = item.tags.filter(tag => userKeywords.includes(normalizeText(tag)));
-                if (matchedTags.length > 0) {
-                    if (!foundItems.some(found => found.link === item.link)) {
-                        foundItems.push(item);
-                    }
+                const hasMatch = item.tags.some(tag => {
+                    const normalizedTag = normalizeText(tag);
+                    return normalizedUserMessage.includes(normalizedTag);
+                });
+
+                if (hasMatch) {
+                    foundItems.push(item);
                 }
             });
 
