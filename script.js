@@ -218,8 +218,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function getBotResponse(userMessage) {
             const normalizedUserMessage = normalizeText(userMessage);
-            let foundItems = [];
+            
+            // --- Brincadeira: TK pra São Tomé ---
+            if (normalizedUserMessage.includes("tk pra sao tome")) {
+                const jokeResponse = "Vou a São Tomé e Príncipe beber o Vinho de Palma, só espero que não fiquem à espera de respostas rápidas depois disso 😂. Vem comigo no ritmo de Leve-Leve de São Tomé e Príncipe! 🇸🇹🍹✨";
+                
+                const imageHTML = `<img src="images/tk.ai.jpg" alt="TK-AI" style="width: 100%; max-width: 200px; border-radius: 10px; margin-bottom: 15px; display: block; border: 3px solid var(--accent-color); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">`;
+                
+                addMessageToChat('bot', null, imageHTML + `<p>${jokeResponse}</p>`);
+                return;
+            }
 
+            // --- Ativação pelo nome "TK" ---
+            if (normalizedUserMessage === "tk" || normalizedUserMessage.split(/\s+/).includes("tk")) {
+                const tkResponse = "Eis-me aqui! Estás com energia hoje? ✨ Preparei uma seleção especial de blogs para explorares o melhor de São Tomé e Príncipe. Dá uma vista de olhos nestas sugestões! 🇸🇹🏝️";
+                
+                let recommendationsHTML = `<p>${tkResponse}</p><br>`;
+                // Recomenda 3 blogs específicos
+                const recommendedIndices = [1, 2, 3]; // Gastronomia, Biodiversidade, Centro do Mundo
+                recommendedIndices.forEach(index => {
+                    const item = knowledgeBase[index];
+                    recommendationsHTML += `<strong>${item.title}</strong><a href="${item.link}" class="response-button">Ler Artigo</a>`;
+                });
+
+                addMessageToChat('bot', null, recommendationsHTML);
+                return;
+            }
+
+            // --- Saudações ---
+            const greetings = ['ola', 'oi', 'bom dia', 'boa tarde', 'boa noite', 'hey', 'hello', 'hi', 'tudo bem'];
+            const isGreeting = greetings.some(greet => normalizedUserMessage === greet || normalizedUserMessage.startsWith(greet + " "));
+            
+            if (isGreeting) {
+                addMessageToChat('bot', "Olá! É um prazer falar contigo. 😊 Em que posso ajudar na tua viagem a São Tomé e Príncipe? Podes perguntar sobre as praias, a comida local ou até sobre o nosso Cartão Viajante!");
+                return;
+            }
+
+            // --- Busca na Base de Conhecimento ---
+            let foundItems = [];
             knowledgeBase.forEach(item => {
                 const hasMatch = item.tags.some(tag => {
                     const normalizedTag = normalizeText(tag);
@@ -240,9 +276,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
+            // --- Resposta Padrão ---
             let response = {
-                text: 'Não encontrei uma resposta para a sua pergunta. Se quiser, pode preencher o nosso formulário de contacto e a nossa equipa responderá assim que possível.',
-                button: { text: 'Aceder ao Formulário', link: 'index.html#contactos' }
+                text: 'Não encontrei uma resposta exata para isso... Mas sou um robô em aprendizagem! Que tal explorares os tópicos sugeridos nos botões abaixo ou preencheres o nosso formulário?',
+                button: { text: 'Ir para Formulário', link: 'index.html#contactos' }
             };
 
             let botMessageHTML = response.text;
