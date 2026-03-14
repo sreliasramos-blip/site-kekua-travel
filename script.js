@@ -147,23 +147,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Chat ---
+    // --- Chat Logic ---
     const chatButton = document.querySelector('.chat-button');
     const chatWindow = document.getElementById('chat-window');
-    const closeChat = document.getElementById('close-chat');
     const chatBody = document.getElementById('chat-body');
     const chatInput = document.getElementById('chat-input');
     const sendChat = document.getElementById('send-chat');
     const faqButtonsContainer = document.getElementById('faq-buttons');
+    const closeChat = document.getElementById('close-chat');
 
-    if (chatButton && chatWindow && closeChat && chatBody && chatInput && sendChat && faqButtonsContainer) {
+    // Behavior for Floating Button: Redirect to dedicated page
+    if (chatButton) {
         chatButton.addEventListener('click', () => {
-            chatWindow.classList.toggle('open');
+            window.location.href = 'ia-chat.html';
         });
+    }
 
-        closeChat.addEventListener('click', () => {
-            chatWindow.classList.remove('open');
-        });
+    // Setup Chat behavior if elements exist (Dedicated Page)
+    if (chatWindow && chatBody && chatInput && sendChat && faqButtonsContainer) {
+        
+        if (closeChat) {
+            closeChat.addEventListener('click', () => {
+                chatWindow.classList.remove('open');
+            });
+        }
 
         sendChat.addEventListener('click', () => handleSendMessage());
         chatInput.addEventListener('keydown', (e) => {
