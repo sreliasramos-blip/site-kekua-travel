@@ -493,6 +493,10 @@ footer { background: #111; color: #aaa; padding: 4rem 8% 2rem; }
         margin-right: 0;
         margin-top: -4rem;
     }
+    .hero-content h1 {
+        font-size: clamp(1.8rem, 8vw, 3.5rem);
+        line-height: 1.1;
+    }
 }
 
 @media (max-width: 768px) { /* Outras seções */
