@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P4NDDE1HNM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-P4NDDE1HNM');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidade - Kêkua Travel</title>
@@ -73,12 +83,14 @@
 
     <header>
         <nav>
-            <div class="logo">Kêkua Travel</div>
+            <div class="logo">
+                <img src="images/logotipo.jpg" alt="Kêkua Travel" style="height: 50px; width: auto; border-radius: 5px;">
+            </div>
             <ul class="nav-links">
+                <div class="close-menu"><i class="fas fa-times"></i></div>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="index.html#destino">O Destino</a></li>
                 <li><a href="index.html#sobre">Sobre</a></li>
-                <li><a href="#pilares">Pilares</a></li>
                 <li><a href="cartao-viajante.html">Cartão Viajante</a></li>
                 <li><a href="blog.html">Blog</a></li>
             </ul>
@@ -96,7 +108,7 @@
         </section>
 
         <section class="privacy-content">
-            <p><strong>Última atualização:</strong> Outubro de 2023</p>
+            <p><strong>Última atualização:</strong> 16 de Março de 2026</p>
 
             <p>A sua privacidade é importante para nós. Esta política de privacidade explica como a Kêkua Travel (um projeto académico) recolhe, usa e protege os seus dados pessoais.</p>
 
@@ -121,34 +133,26 @@
         </section>
     </main>
 
-    <footer class="footer-bottom">
-        <p>© 2024 Kêkua Travel. Todos os direitos (académicos) reservados. | <a href="newsletter.html">Newsletter</a> | <a href="politica-de-privacidade.html">Política de Privacidade</a> | <a href="https://www.livroreclamacoes.pt/inicio/" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a></p>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="logo">
+                    <img src="images/logotipo.jpg" alt="Kêkua Travel" style="height: 40px; width: auto; border-radius: 3px; margin-bottom: 1rem;">
+                </div>
+                <p>Projeto académico – Prova de Aptidão Profissional (PAP). Este site não representa uma empresa real.</p>
+            </div>
+            <div class="footer-col"><h3>Navegação</h3><ul><li><a href="index.html">Início</a></li><li><a href="index.html#destino">O Destino</a></li><li><a href="index.html#sobre">Sobre</a></li><li><a href="cartao-viajante.html">Cartão Viajante</a></li><li><a href="newsletter.html">Newsletter</a></li></ul></div>
+            <div class="footer-col"><h3>Siga-nos</h3><div class="social-links"><a href="https://www.instagram.com/kekuatravel?igsh=MXV0Y2U3eWd2ZHU1Mg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="https://www.tiktok.com/@kekuatravel?_r=1&_t=ZG-937tm7KsDiL" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a><a href="https://youtube.com/@kekuatravel?si=HzYds9FcWDkWeBB7" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></div></div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Kêkua Travel. Todos os direitos (académicos) reservados. | <a href="politica-de-privacidade.html">Política de Privacidade</a> | <a href="https://www.livroreclamacoes.pt/inicio/" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a> | By <a href="https://www.instagram.com/ramos.c.e" target="_blank" rel="noopener noreferrer">Elias Carvalho</a></p>
+        </div>
     </footer>
 
     <div class="chat-button">
-        <i class="fas fa-comment-dots"></i>
+        <img src="images/tk.ai.jpg" alt="TK-AI">
     </div>
 
-    <div class="chat-window" id="chat-window">
-        <div class="chat-header">
-            <h3>Chat de Suporte</h3>
-            <button class="close-chat" id="close-chat">&times;</button>
-        </div>
-        <div class="chat-body" id="chat-body">
-            <div class="chat-message bot">Olá! Como posso ajudar?</div>
-        </div>
-        <div class="faq-buttons" id="faq-buttons">
-            <button class="faq-button" data-question="Tipos de experiências">Experiências</button>
-            <button class="faq-button" data-question="Sustentabilidade">Sustentabilidade</button>
-            <button class="faq-button" data-question="Cartão de viajante">Cartão Kêkua</button>
-            <button class="faq-button" data-question="Fazer uma reserva">Reservas</button>
-        </div>
-        <div class="chat-footer">
-            <input type="text" id="chat-input" placeholder="Escreva a sua mensagem...">
-            <button id="send-chat"><i class="fas fa-paper-plane"></i></button>
-        </div>
-    </div>
-    
     <script src="script.js"></script>
 </body>
 </html>

@@ -147,6 +147,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Cookie Banner Logic ---
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptCookies = document.getElementById('accept-cookies');
+
+    if (cookieBanner && acceptCookies) {
+        if (localStorage.getItem('cookiesAccepted')) {
+            cookieBanner.style.display = 'none';
+        }
+
+        acceptCookies.addEventListener('click', () => {
+            cookieBanner.style.opacity = '0';
+            cookieBanner.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                cookieBanner.style.display = 'none';
+                localStorage.setItem('cookiesAccepted', 'true');
+            }, 500);
+        });
+    }
+
     // --- Chat Logic ---
     const chatButton = document.querySelector('.chat-button');
     const chatWindow = document.getElementById('chat-window');
